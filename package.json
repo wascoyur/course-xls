@@ -1,0 +1,31 @@
+{
+  "name": "course-xls",
+  "version": "1.0.0",
+  "description": "javascript course from vladilen minin",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wascoyur/course-xls.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "course"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wascoyur/course-xls/issues"
+  },
+  "homepage": "https://github.com/wascoyur/course-xls#readme",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
