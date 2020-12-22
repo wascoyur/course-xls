@@ -9,7 +9,7 @@ module.exports ={
     mode: "development",
     entry: './index.js',
     output: {
-        filename: "bundle.[hash].js",
+        filename: "bundle.[contenthash:4].js",
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
@@ -32,8 +32,31 @@ module.exports ={
                 }
             ]}),
         new MiniCssExtractPlugin({
-            filename: 'bundle.[hash].css'
+            filename: 'bundle.[hash:4].css'
         })
     ],
+    module: {
+        rules: [
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                  MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+            {
+                test:/\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-object-rest-spread']
+                    }
+                }
+            }
+        ],
+    },
 
 }

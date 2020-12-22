@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack",
+    "dev start": "webpack",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -17,7 +17,7 @@
     "javascript",
     "course"
   ],
-  "author": "",
+  "author": "yur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wascoyur/course-xls/issues"
@@ -25,10 +25,16 @@
   "homepage": "https://github.com/wascoyur/course-xls#readme",
   "private": true,
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.0",
+    "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
